@@ -1,7 +1,7 @@
 import React from "react";
 import {ThemeChanger} from "./ThemeChanger";
 import {Nav} from "./Nav";
-import {AccordionMenu} from "./AccordionMenu";
+import {AccordionMenuButton} from "./AccordionMenuButton";
 
 
 interface HeaderProps {
@@ -19,11 +19,10 @@ export function Header({logo}: HeaderProps) {
                     </a>
                 </div>
                 <Nav/>
-                <div className="flex flex-row gap-2">
+                <div className="flex flex-row gap-3">
                     <ThemeChanger/>
-                    <AccordionMenu/>
+                    <AccordionMenuButton/>
                 </div>
-
             </div>
         </header>
     )

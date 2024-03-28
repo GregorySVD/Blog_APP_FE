@@ -13,8 +13,8 @@ function App() {
 
     return (
         <div
-            className="font-sans bg-white flex flex-col dark:bg-neutral-950 dark:text-white h-full w-full">
-            <Header logo={!darkTheme ? darkLogo : lightLogo}/>
+            className="font-sans bg-white flex flex-col dark:bg-neutral-900 dark:text-white h-full w-full">
+            <Header logo={darkTheme ? darkLogo : lightLogo}/>
             <main className="px-4">
                 <div className="flex flex-col">
                     <h1 className="text-6xl">Blog Readme </h1>
