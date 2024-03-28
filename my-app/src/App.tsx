@@ -1,27 +1,31 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
+import {Header} from "./components/Header";
+import lightLogo from "./assets/light-logo.png";
+import darkLogo from "./assets/dark-logo.png";
+import {useDarkTheme} from "./context/ThemeContext";
+import {ArticleLayout} from "./components/ArticleLayout";
 
 
 function App() {
-    const [theme, setTheme] = useState("light");
-
+    const {darkTheme} = useDarkTheme();
     useEffect(() => {
-        if(theme === "dark") {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
-    }, [theme]);
-
-    const handleThemeSwitch = () => {
-        setTheme(theme === "dark" ? "light" : "dark");
-    };
+        document.body.classList.toggle('dark', darkTheme);
+    }, [darkTheme]);
 
     return (
-        <div className="text-center text-xl w-screen h-screen font-sans bg-white text-black flex justify-center items-center dark:bg-neutral-950 dark:text-white" >
-            <h1>Test</h1>
-            <button className="px-4 py-2 bg-green-400 rounded justify-center" onClick={handleThemeSwitch}>
-                Dark Mode
-            </button>
+        <div
+            className="font-sans bg-white flex flex-col dark:bg-neutral-900 dark:text-white h-full w-full">
+            <Header logo={darkTheme ? darkLogo : lightLogo}/>
+
+            <main className="px-10">
+                <hr/>
+                <div className="flex flex-col">
+                    <h1 className="text-6xl">Blog Readme </h1>
+                    <p className="text-2xl my-1">My road to IT </p>
+                </div>
+                <hr/>
+                <ArticleLayout/>
+            </main>
         </div>
     );
 }
