@@ -3,7 +3,7 @@ import {Header} from "./components/Header";
 import lightLogo from "./assets/light-logo.png";
 import darkLogo from "./assets/dark-logo.png";
 import {useDarkTheme} from "./context/ThemeContext";
-import {ArticleLayout} from "./components/ArticleLayout";
+import {PostsCards} from "./components/PostsCards";
 
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
                     <p className="text-2xl my-1">My road to IT </p>
                 </div>
                 <hr/>
-                <ArticleLayout/>
+                <PostsCards/>
             </main>
         </div>
     );
