@@ -2,22 +2,15 @@ import React from "react";
 import {ThemeChanger} from "./ThemeChanger";
 import {Nav} from "./Nav";
 import {AccordionMenuButton} from "./AccordionMenuButton";
+import {Logo} from "./Logo";
 
 
-interface HeaderProps {
-    logo: string;
-}
-
-export function Header({logo}: HeaderProps) {
+export function Header() {
 
     return (
-        <header className="py-2 px-4 bg-inherit w-screen sticky top-0 z-50">
-            <div className="container flex items-center justify-between w-full">
-                <div id="logo" className="w-1/5 items-center">
-                    <a href="https://github.com/GregorySVD">
-                        <img className="max-h-16" src={logo} alt="Logo GT.log()"/>
-                    </a>
-                </div>
+        <header className="py-2 px-10 bg-inherit w-screen sticky top-0 z-50">
+            <div className="flex items-center justify-between w-full">
+                <Logo/>
                 <Nav/>
                 <div className="flex flex-row gap-3">
                     <ThemeChanger/>
