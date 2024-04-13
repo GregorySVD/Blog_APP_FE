@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import {Header} from "./components/Header";
-
 import {useDarkTheme} from "./context/ThemeContext";
 import {PostsCards} from "./components/PostsCards";
 import {Footer} from "./components/Footer";

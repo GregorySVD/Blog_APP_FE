@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../assets/icon.png";
+import logo from "../assets/logo.png";
 
 export const Logo = () => {
     return <aside>
