@@ -1,28 +1,32 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
+import {Header} from "./components/Header";
+import {useDarkTheme} from "./context/ThemeContext";
+import {PostsCards} from "./components/PostsCards";
+import {Footer} from "./components/Footer";
 
 
 function App() {
-    const [theme, setTheme] = useState("light");
-
+    const {darkTheme} = useDarkTheme();
     useEffect(() => {
-        if(theme === "dark") {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
-    }, [theme]);
-
-    const handleThemeSwitch = () => {
-        setTheme(theme === "dark" ? "light" : "dark");
-    };
+        document.body.classList.toggle('dark', darkTheme);
+    }, [darkTheme]);
 
     return (
-        <div className="text-center text-xl w-screen h-screen font-sans bg-white text-black flex justify-center items-center dark:bg-neutral-950 dark:text-white" >
-            <h1>Test</h1>
-            <button className="px-4 py-2 bg-green-400 rounded justify-center" onClick={handleThemeSwitch}>
-                Dark Mode
-            </button>
-        </div>
+            <div className="relative">
+                <div className="font-sans bg-white text-black flex flex-col dark:bg-neutral-900 dark:text-white min-h-full w-full">
+                    <Header/>
+                    <main className="px-10 flex-grow pb-52">
+                        <hr/>
+                        <div className="flex flex-col">
+                            <h1 className="text-6xl">Blog Readme</h1>
+                            <p className="text-2xl my-1">My road to IT</p>
+                        </div>
+                        <hr/>
+                        <PostsCards/>
+                    </main>
+                </div>
+                <Footer/>
+            </div>
     );
 }
 
