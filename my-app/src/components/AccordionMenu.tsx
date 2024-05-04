@@ -9,9 +9,9 @@ export const AccordionMenu = () => {
                 <nav className="h-1/3">
                     <ul className="flex flex-col items-left h-full justify-evenly mx-2">
                         <NavLinkLi link={"/contact"} name={"Contact"}/>
-                        <NavLinkLi link={"/aboutMe"} name={"About Me"}/>
+                        <NavLinkLi link={"/about"} name={"About"}/>
                         <NavLinkLi link={"/blog"} name={"Blog"}/>
-                        <NavLinkLi link={"/"} name={"Main Page"}/>
+                        <NavLinkLi link={"/"} name={"Home"}/>
                     </ul>
                 </nav>
             </div>
