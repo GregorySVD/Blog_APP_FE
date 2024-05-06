@@ -8,8 +8,7 @@ export const Nav = () => {
             <ul className="flex flex-row items-center h-full">
                 <NavLinkLi link={"/contact"} name={"Contact"}/>
                 <NavLinkLi link={"/about"} name={"About Project"}/>
-                <NavLinkLi link={"/blog"} name={"Blog"}/>
-                <NavLinkLi link={"/"} name={"Home"}/>
+                <NavLinkLi link={"/"} name={"Blog"}/>
             </ul>
         </nav>
     );
