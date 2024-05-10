@@ -33,6 +33,12 @@ export const PostsCards = () => {
             setCurrentPage(currentPage - 1);
         }
     };
+    const handleLastPage = () => {
+        setCurrentPage(pageCount);
+    }
+    const handleFirstPage = () => {
+        setCurrentPage(1);
+    }
 
     return (
         <div>
@@ -46,6 +52,8 @@ export const PostsCards = () => {
                 pageCount={pageCount}
                 handlePrevPage={handlePrevPage}
                 handleNextPage={handleNextPage}
+                handleLastPage={handleLastPage}
+                handleFirstPage={handleFirstPage}
             /> : null}
         </div>
     )
