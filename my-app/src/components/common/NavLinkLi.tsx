@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 interface NavLinksProps {
     name: string;
@@ -9,6 +10,8 @@ export const NavLinkLi: React.FC<NavLinksProps> = ({link, name}) => {
 
 
     return (
-        <li className="mx-4 hover:text-red-700 cursor-pointer font-bold"><a href={link}>{name}</a></li>
+        <li className="mx-4 hover:text-red-700 cursor-pointer font-bold">
+            <Link to={link}>{name}</Link>
+        </li>
     )
 }
