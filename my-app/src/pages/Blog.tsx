@@ -8,7 +8,7 @@ export const Blog = () => {
         <div className="relative">
             <div className="font-sans bg-white text-black flex flex-col dark:bg-neutral-900 dark:text-white min-h-full w-full">
                 <Header/>
-                <main className="px-10 flex-grow pb-52">
+                <main className="px-10 flex-grow">
                     <hr/>
                     <div className="flex flex-col">
                         <h1 className="text-6xl">Blog Readme</h1>
@@ -20,6 +20,5 @@ export const Blog = () => {
             </div>
             <Footer/>
         </div>
-
     )
 }
