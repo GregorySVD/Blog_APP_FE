@@ -8,7 +8,7 @@ export const Blog = () => {
     return (
         <>
             <div
-                className="relative font-sans bg-white text-black flex flex-col dark:bg-neutral-900 dark:text-white min-h-full w-full">
+                className="relative font-sans bg-neutral-100 text-black flex flex-col dark:bg-neutral-900 dark:text-white min-h-full w-full">
                 <PageHeader/>
                 <main className="px-10 flex-grow">
                     <BlogHeaderTitle/>
