@@ -1,7 +1,7 @@
 import React from 'react';
 import {FaRegCalendar} from "react-icons/fa";
 import {formatDate} from "../utils/formatDate";
-import {Tags} from "./Tags";
+import {PostTags} from "./PostTags";
 
 
 interface Props {
@@ -22,7 +22,7 @@ export const SinglePostCardDetails = ({title, createdAt, tags}: Props) => {
                         <FaRegCalendar/>
                             {!createdAt ? null : formatDate(createdAt)}
                         </span>
-            <Tags tags={tags}/>
+            <PostTags tags={tags}/>
         </div>
     </div>
 }

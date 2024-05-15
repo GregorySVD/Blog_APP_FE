@@ -5,7 +5,7 @@ import {AccordionMenuButton} from "./AccordionMenuButton";
 import {Logo} from "./Logo";
 
 
-export function Header() {
+export function PageHeader() {
 
     return (
         <header className="py-2 px-10 bg-inherit w-screen sticky top-0 z-50">
