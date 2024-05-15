@@ -4,7 +4,7 @@ interface Props {
     tags: string[] | undefined;
 }
 
-export const Tags = ({ tags }: Props) => {
+export const PostTags = ({ tags }: Props) => {
     if (!tags || tags.length === 0) {
         return null;
     }
